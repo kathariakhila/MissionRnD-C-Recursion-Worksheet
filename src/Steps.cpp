@@ -23,8 +23,19 @@
 */
 #include "stdafx.h"
 
+int count(int s){
+
+	if (s <= 1)
+		return s;
+	else
+		return count(s - 1) + count(s - 2);
+
+}
+
 
 int get_steps(int s)
 {
-	return 0;
+	
+	return count(s + 1);
+
 }
